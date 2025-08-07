@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plantillas_contratos",
+  "info": {
+    "singularName": "plantillas-contrato",
+    "pluralName": "plantillas-contratos",
+    "displayName": "PlantillasContratos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "Contenido": {
+      "type": "blocks"
+    },
+    "Archivo": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

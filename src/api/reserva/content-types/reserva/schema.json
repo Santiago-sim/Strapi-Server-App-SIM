@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservas",
+  "info": {
+    "singularName": "reserva",
+    "pluralName": "reservas",
+    "displayName": "Reserva",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tour_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tour.tour",
+      "inversedBy": "reservas"
+    },
+    "Fecha": {
+      "pluginOptions": {},
+      "type": "date",
+      "required": true
+    },
+    "Mensaje": {
+      "type": "text"
+    },
+    "Confirmacion": {
+      "type": "boolean",
+      "default": false
+    },
+    "documentoFirmado": {
+      "type": "boolean",
+      "default": false
+    },
+    "docusignEnvelopeId": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "required": true
+    },
+    "contrato_generado": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "contrato_firmado": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

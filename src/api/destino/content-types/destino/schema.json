@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinos",
+  "info": {
+    "singularName": "destino",
+    "pluralName": "destinos",
+    "displayName": "Destino"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "tours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tour.tour",
+      "mappedBy": "destino"
+    }
+  }
+}
